@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour {
 
     void Start() {
         rb = GetComponent<Rigidbody2D>(); 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         rb.velocity = new Vector2(mousePos.x, mousePos.y) * bullet_speed;
     }
 
