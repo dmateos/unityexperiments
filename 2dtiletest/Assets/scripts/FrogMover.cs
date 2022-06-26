@@ -18,10 +18,6 @@ public class FrogMover : MonoBehaviour {
     }
 
     void Update() {
-        if(animator.isPlaying) {
-            return;
-        }
-
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float horizontal = Input.GetAxisRaw("Horizontal");
         bool fire = Input.GetMouseButtonDown(0);
